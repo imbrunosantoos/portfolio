@@ -18,9 +18,47 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://site-pessoal-nine-wheat.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Bruno Santos — Portfolio",
-  description: "Personal website and portfolio of Bruno Santos.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Bruno Santos — Developer Portfolio",
+    template: "%s — Bruno Santos",
+  },
+  description:
+    "Developer portfolio of Bruno Santos — terminal games, a crypto arbitrage bot, CLI projects and more.",
+  keywords: [
+    "Bruno Santos",
+    "developer",
+    "portfolio",
+    "software developer",
+    "Python",
+    "C++",
+    "TypeScript",
+  ],
+  authors: [{ name: "Bruno Santos" }],
+  alternates: {
+    languages: {
+      en: "/en",
+      pt: "/pt",
+      es: "/es",
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Bruno Santos — Portfolio",
+    title: "Bruno Santos — Developer Portfolio",
+    description:
+      "Developer portfolio of Bruno Santos — terminal games, a crypto arbitrage bot, CLI projects and more.",
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bruno Santos — Developer Portfolio",
+    description:
+      "Developer portfolio of Bruno Santos — terminal games, a crypto arbitrage bot, CLI projects and more.",
+  },
 };
 
 export function generateStaticParams() {

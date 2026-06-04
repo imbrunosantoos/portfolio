@@ -53,15 +53,19 @@ function ProjectDetail({ project }: { project: Project }) {
     <article className="mx-auto max-w-3xl px-6 py-12">
       <Link
         href="/"
-        className="text-foreground/60 hover:text-foreground mb-8 inline-flex items-center gap-2 text-sm transition-colors"
+        className="text-muted hover:text-accent mb-8 inline-flex items-center gap-2 font-mono text-sm transition-colors"
       >
         <ArrowLeft className="h-4 w-4" />
-        {t("projectsSection.back")}
+        cd ../
       </Link>
 
-      <div className="flex items-center gap-3">
+      <p className="text-muted font-mono text-sm">
+        <span className="text-accent">~/</span>
+        {project.slug}
+      </p>
+      <div className="mt-2 flex items-center gap-3">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
-        <span className="text-foreground/40 text-sm">{project.year}</span>
+        <span className="text-muted font-mono text-sm">{project.year}</span>
       </div>
 
       {project.image && (
@@ -76,19 +80,21 @@ function ProjectDetail({ project }: { project: Project }) {
         </div>
       )}
 
-      <p className="text-foreground/80 mt-6 text-lg leading-relaxed">{long}</p>
+      <p className="text-muted mt-6 text-lg leading-relaxed">
+        <span className="text-accent">&gt;</span> {long}
+      </p>
 
       <div className="mt-8">
-        <h2 className="text-foreground/50 mb-3 text-xs font-semibold tracking-wide uppercase">
-          {t("projectsSection.techTitle")}
+        <h2 className="text-muted mb-3 font-mono text-xs">
+          <span className="text-accent">~$</span> {t("projectsSection.techTitle")}
         </h2>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 font-mono">
           {project.tech.map((tech) => (
             <span
               key={tech}
-              className="border-foreground/10 bg-foreground/5 rounded-full border px-3 py-1 text-sm"
+              className="border-border bg-foreground/[0.03] rounded-md border px-3 py-1 text-sm"
             >
-              {tech}
+              #{tech.toLowerCase().replace(/\s+/g, "-")}
             </span>
           ))}
         </div>

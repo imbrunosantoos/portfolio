@@ -11,22 +11,25 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group border-foreground/10 bg-foreground/[0.03] hover:border-accent/50 hover:bg-foreground/[0.06] relative flex flex-col gap-3 rounded-xl border p-5 transition-colors"
+      className="group border-border bg-foreground/[0.02] hover:border-accent/50 hover:bg-foreground/[0.05] relative flex flex-col gap-3 rounded-xl border p-5 transition-colors"
     >
       <div className="flex items-start justify-between gap-3">
-        <h3 className="group-hover:text-accent text-lg font-semibold tracking-tight transition-colors">
-          {title}
-        </h3>
-        <ArrowUpRight className="text-foreground/40 group-hover:text-accent h-5 w-5 shrink-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <p className="text-muted font-mono text-xs">
+          <span className="text-accent">~/</span>
+          {project.slug}
+        </p>
+        <ArrowUpRight className="text-muted group-hover:text-accent h-5 w-5 shrink-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </div>
-      <p className="text-foreground/70 text-sm leading-relaxed">{short}</p>
-      <div className="mt-auto flex flex-wrap gap-2 pt-2">
+      <h3 className="group-hover:text-accent text-lg font-semibold tracking-tight transition-colors">
+        {title}
+      </h3>
+      <p className="text-muted text-sm leading-relaxed">
+        <span className="text-accent">&gt;</span> {short}
+      </p>
+      <div className="mt-auto flex flex-wrap gap-2 pt-2 font-mono">
         {project.tech.map((tech) => (
-          <span
-            key={tech}
-            className="border-foreground/10 bg-foreground/5 text-foreground/60 rounded-full border px-2.5 py-0.5 text-xs"
-          >
-            {tech}
+          <span key={tech} className="text-muted text-xs">
+            #{tech.toLowerCase().replace(/\s+/g, "-")}
           </span>
         ))}
       </div>
