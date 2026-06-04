@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "Bruno Santos",
+    "role": "Desarrollador de Software"
+  },
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos"
+  },
+  "hero": {
+    "greeting": "Hola, soy Bruno",
+    "tagline": "Construyo cosas — desde juegos de terminal hasta bots de cripto. Aquí tienes una muestra de los proyectos en los que trabajo.",
+    "cta": "Ver proyectos"
+  },
+  "projectsSection": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de cosas que he construido.",
+    "viewDetails": "Ver detalles",
+    "viewCode": "Ver código",
+    "viewDemo": "Demo en vivo",
+    "back": "Volver a proyectos",
+    "techTitle": "Construido con",
+    "comingSoon": "Repositorio próximamente"
+  },
+  "footer": {
+    "builtWith": "Hecho con Next.js · Desplegado en Vercel",
+    "rights": "Todos los derechos reservados."
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "notFound": {
+    "title": "Proyecto no encontrado",
+    "description": "El proyecto que buscas no existe.",
+    "back": "Volver al inicio"
+  },
+  "projects": {
+    "terminal-rpg": {
+      "title": "RPG de Terminal",
+      "short": "Un juego de rol que se juega completamente en la terminal.",
+      "long": "Un juego de rol basado en texto que corre en la terminal. Explora, lucha contra enemigos y sube de nivel a tu personaje a través de una interfaz de línea de comandos, con el estado del juego, el combate y la progresión gestionados en el código."
+    },
+    "crypto-arbitrage-bot": {
+      "title": "Bot de Arbitraje de Cripto",
+      "short": "Un bot de arbitraje de cripto hecho en un hackathon.",
+      "long": "Un bot de trading hecho en un hackathon que escanea los mercados de cripto en busca de oportunidades de arbitraje — diferencias de precio entre exchanges o pares — y reacciona a ellas automáticamente. Centrado en obtener datos de mercado en tiempo real y actuar sobre spreads rentables."
+    },
+    "solitaire-cli": {
+      "title": "Solitario en Terminal",
+      "short": "Un juego de solitario (cartas) jugable en la terminal.",
+      "long": "Un juego de solitario que corre en la terminal, hecho como proyecto universitario (LI2). Implementa toda la lógica del juego de cartas — baraja, pilas, movimientos y condiciones de victoria — con una interfaz de texto."
+    },
+    "background-remover": {
+      "title": "Eliminador de Fondo",
+      "short": "Un script que elimina el fondo de las fotos.",
+      "long": "Un script que elimina automáticamente el fondo de las imágenes, aislando el sujeto. Útil para fotos de producto, avatares y ediciones rápidas sin abrir un editor de imágenes pesado."
+    },
+    "resell-tracker": {
+      "title": "Rastreador de Reventa",
+      "short": "Una herramienta para seguir artículos de reventa, costos y ganancias.",
+      "long": "Un rastreador para reventa: lleva el control de los artículos, costos de compra, precios de venta y ganancias a lo largo del tiempo. Ayuda a ver qué vale la pena revender y cómo cuadran los números."
+    }
+  }
+}

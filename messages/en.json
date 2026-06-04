@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "Bruno Santos",
+    "role": "Software Developer"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Bruno",
+    "tagline": "I build things — from terminal games to crypto bots. Here's a look at the projects I'm working on.",
+    "cta": "View projects"
+  },
+  "projectsSection": {
+    "title": "Projects",
+    "subtitle": "A selection of things I've built.",
+    "viewDetails": "View details",
+    "viewCode": "View code",
+    "viewDemo": "Live demo",
+    "back": "Back to projects",
+    "techTitle": "Built with",
+    "comingSoon": "Repository coming soon"
+  },
+  "footer": {
+    "builtWith": "Built with Next.js · Deployed on Vercel",
+    "rights": "All rights reserved."
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "notFound": {
+    "title": "Project not found",
+    "description": "The project you're looking for doesn't exist.",
+    "back": "Back to home"
+  },
+  "projects": {
+    "terminal-rpg": {
+      "title": "Terminal RPG",
+      "short": "A role-playing game you play entirely in the terminal.",
+      "long": "A text-based role-playing game that runs in the terminal. Explore, fight enemies and level up your character through a command-line interface, with game state, combat and progression all handled in code."
+    },
+    "crypto-arbitrage-bot": {
+      "title": "Crypto Arbitrage Bot",
+      "short": "A crypto arbitrage bot built during a hackathon.",
+      "long": "A trading bot built at a hackathon that scans crypto markets for arbitrage opportunities — price differences across exchanges or pairs — and reacts to them automatically. Focused on fetching live market data and acting on profitable spreads."
+    },
+    "solitaire-cli": {
+      "title": "Solitaire CLI",
+      "short": "A solitaire card game playable in the terminal.",
+      "long": "A solitaire (patience) card game that runs in the terminal, built as a university project (LI2). Implements the full card game logic — deck, stacks, moves and win conditions — with a text-based interface."
+    },
+    "background-remover": {
+      "title": "Background Remover",
+      "short": "A script that removes the background from photos.",
+      "long": "A script that automatically removes the background from images, isolating the subject. Useful for product photos, avatars and quick edits without opening a heavy image editor."
+    },
+    "resell-tracker": {
+      "title": "Resell Tracker",
+      "short": "A tool to track reselling items, costs and profit.",
+      "long": "A tracker for reselling: keep tabs on items, buying costs, selling prices and profit over time. Helps see what's worth flipping and how the numbers add up."
+    }
+  }
+}

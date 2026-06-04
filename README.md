@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio — Bruno Santos
 
-## Getting Started
+My personal website / portfolio, showcasing my current and future projects.
 
-First, run the development server:
+🌐 **Live:** _coming soon (Vercel)_
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org/) (App Router) + React 19 + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [next-intl](https://next-intl.dev/) for i18n — **English (default)**, Português, Español
+- [lucide-react](https://lucide.dev/) icons
+- Deployed on [Vercel](https://vercel.com/)
+
+## Features
+
+- 🌍 Trilingual (EN / PT / ES) with a language switcher
+- 🌙 Dark theme
+- 🗂️ Project cards on the home page + a detail page per project
+- ➕ Adding a new project = editing one data file + its translations
+
+## Projects featured
+
+| Project | Description |
+| --- | --- |
+| Terminal RPG | A role-playing game playable in the terminal |
+| Crypto Arbitrage Bot | Crypto arbitrage bot built at a hackathon |
+| Solitaire CLI | Card / solitaire game in the terminal (LI2 project) |
+| Background Remover | Script to remove the background from photos |
+| Resell Tracker | A reselling tracker |
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding a new project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Add an entry to `src/content/projects.ts` (slug, tech, repo URL, image…).
+2. Add its translations (`title` / `short` / `long`) to `messages/en.json`,
+   `messages/pt.json` and `messages/es.json` under `projects.<slug>`.
+3. (Optional) Drop a screenshot in `public/projects/`.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
