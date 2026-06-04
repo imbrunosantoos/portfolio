@@ -14,22 +14,22 @@ export const socials = {
 export const skillGroups: { labelKey: string; items: string[] }[] = [
   {
     labelKey: "languages",
-    items: ["Python", "C++", "TypeScript", "JavaScript", "SQL"],
+    items: ["Python", "C", "JavaScript", "TypeScript", "SQL"],
+  },
+  {
+    labelKey: "frameworks",
+    items: ["Next.js", "React", "Streamlit"],
   },
   {
     labelKey: "tools",
-    items: ["Git", "Linux", "Next.js", "React", "Node.js", "REST APIs"],
-  },
-  {
-    labelKey: "interests",
-    items: ["CLI / TUI", "Automation", "Crypto / trading", "Web dev"],
+    items: ["Git", "Linux", "SQLite", "Node.js", "CUnit"],
   },
 ];
 
 /** Headline stats. `value` is shown as-is; `labelKey` maps to `stats.<labelKey>`. */
 export const stats: { value: string; labelKey: string }[] = [
   { value: "5+", labelKey: "projects" },
-  { value: "1", labelKey: "hackathons" },
   { value: "5", labelKey: "languages" },
-  { value: "∞", labelKey: "coffee" },
+  { value: "1", labelKey: "hackathons" },
+  { value: "UMinho", labelKey: "university" },
 ];

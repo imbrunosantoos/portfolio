@@ -15,28 +15,24 @@
     "cta": "view projects"
   },
   "stats": {
-    "command": "uptime",
     "projects": "Projects",
-    "hackathons": "Hackathons",
     "languages": "Languages",
-    "coffee": "Cups of coffee"
+    "hackathons": "Hackathons",
+    "university": "University"
   },
   "about": {
-    "command": "cat about.md",
     "title": "About me",
-    "body": "I'm a developer who likes building things from scratch — especially in the terminal. From role-playing games and card games to a crypto arbitrage bot and handy scripts, I enjoy turning ideas into working code. Always learning, always shipping."
+    "body": "I'm a Computer Science student at the University of Minho who likes building things end to end — most of them start in a terminal. I've written dungeon crawlers and a solitaire engine in C and Python, a crypto arbitrage bot at a hackathon, and a full reselling web app. I care about clean code, shipping tools people actually use, and learning whatever the next project needs."
   },
   "skills": {
-    "command": "ls skills/",
     "title": "Skills",
     "groups": {
-      "languages": "languages",
-      "tools": "tools",
-      "interests": "interests"
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "tools": "Tools"
     }
   },
   "contact": {
-    "command": "./contact.sh",
     "title": "Get in touch",
     "body": "Want to talk, collaborate or just say hi? Reach out.",
     "github": "GitHub",
@@ -71,28 +67,28 @@
   "projects": {
     "terminal-rpg": {
       "title": "Terminal RPG",
-      "short": "A role-playing game you play entirely in the terminal.",
-      "long": "A text-based role-playing game that runs in the terminal. Explore, fight enemies and level up your character through a command-line interface, with game state, combat and progression all handled in code."
+      "short": "A terminal dungeon crawler — fight monsters, level up and beat the final boss.",
+      "long": "A role-playing game played entirely in the terminal. Explore a dungeon, fight monsters, gain XP and level up, collect loot, and take down the final boss — all through a command-line interface."
     },
     "crypto-arbitrage-bot": {
-      "title": "Crypto Arbitrage Bot",
-      "short": "A crypto arbitrage bot built during a hackathon.",
-      "long": "A trading bot built at a hackathon that scans crypto markets for arbitrage opportunities — price differences across exchanges or pairs — and reacts to them automatically. Focused on fetching live market data and acting on profitable spreads."
+      "title": "Bot.byte — Crypto Arbitrage Bot",
+      "short": "A crypto arbitrage bot built at the BugsByte 26 hackathon (UMinho).",
+      "long": "Built at the BugsByte 26 hackathon at the University of Minho with team Chill. Bot.byte analyses and compares crypto prices across exchanges in real time and simulates simultaneous buy and sell orders to capture the spread of a pair between different exchanges. Dashboard built with Streamlit."
     },
     "solitaire-cli": {
-      "title": "Solitaire CLI",
-      "short": "A solitaire card game playable in the terminal.",
-      "long": "A solitaire (patience) card game that runs in the terminal, built as a university project (LI2). Implements the full card game logic — deck, stacks, moves and win conditions — with a text-based interface."
+      "title": "LI2 Card Games",
+      "short": "Four solitaires (Golf, Simple Simon, Klondike, FreeCell) in one C engine.",
+      "long": "A suite of terminal card games written in C for the Software Laboratory II (LI2) course at the University of Minho. A single data-driven engine reads each solitaire from text files written in a small DSL and plays Golf, Simple Simon, Klondike and FreeCell — with move validation, automatic moves, win detection, undo and save/load. Built under strict constraints (no global variables, low cyclomatic complexity) and covered by CUnit tests."
     },
     "background-remover": {
       "title": "Background Remover",
-      "short": "A script that removes the background from photos.",
-      "long": "A script that automatically removes the background from images, isolating the subject. Useful for product photos, avatars and quick edits without opening a heavy image editor."
+      "short": "A script that removes the background from photos, isolating the subject.",
+      "long": "A script that automatically removes the background from images, isolating the subject. Handy for product photos, avatars and quick edits without opening a heavy image editor."
     },
     "resell-tracker": {
-      "title": "Resell Tracker",
-      "short": "A tool to track reselling items, costs and profit.",
-      "long": "A tracker for reselling: keep tabs on items, buying costs, selling prices and profit over time. Helps see what's worth flipping and how the numbers add up."
+      "title": "ReSell — Reselling Tracker",
+      "short": "A web app to run a reselling business: costs, margins, profit and partner splits.",
+      "long": "A web app to run a reselling operation end to end. It organizes everything by order and item and works out what matters — real cost (piece + PayPal fee + shipping), margin, profit and days to sell — plus a global summary, profit per category and per partner, and monthly reports. It also includes an order builder that generates a catalog image and a ready-to-send WhatsApp message, pre-orders, an encrypted accounts vault, automatic backups, and a trilingual (PT/EN/ES) installable PWA. Built with Next.js and SQLite (node:sqlite) — no UI or charting libraries, just hand-written CSS and CSS-bar charts."
     }
   }
 }

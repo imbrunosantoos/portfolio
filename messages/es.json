@@ -15,28 +15,24 @@
     "cta": "ver proyectos"
   },
   "stats": {
-    "command": "uptime",
     "projects": "Proyectos",
-    "hackathons": "Hackathons",
     "languages": "Lenguajes",
-    "coffee": "Tazas de café"
+    "hackathons": "Hackathons",
+    "university": "Universidad"
   },
   "about": {
-    "command": "cat sobre.md",
     "title": "Sobre mí",
-    "body": "Soy un desarrollador al que le gusta construir cosas desde cero — especialmente en la terminal. Desde juegos de rol y de cartas hasta un bot de arbitraje de cripto y scripts útiles, disfruto convirtiendo ideas en código que funciona. Siempre aprendiendo, siempre entregando."
+    "body": "Soy estudiante de Ingeniería Informática en la Universidad de Minho y me gusta construir cosas de principio a fin — la mayoría empieza en una terminal. He hecho un dungeon crawler y un motor de solitarios en C y Python, un bot de arbitraje de cripto en un hackathon y una web app completa de reventa. Me importa el código limpio, entregar herramientas que la gente realmente usa, y aprender lo que pida el próximo proyecto."
   },
   "skills": {
-    "command": "ls skills/",
     "title": "Habilidades",
     "groups": {
-      "languages": "lenguajes",
-      "tools": "herramientas",
-      "interests": "intereses"
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "tools": "Herramientas"
     }
   },
   "contact": {
-    "command": "./contacto.sh",
     "title": "Ponte en contacto",
     "body": "¿Quieres hablar, colaborar o solo saludar? Escríbeme.",
     "github": "GitHub",
@@ -71,28 +67,28 @@
   "projects": {
     "terminal-rpg": {
       "title": "RPG de Terminal",
-      "short": "Un juego de rol que se juega completamente en la terminal.",
-      "long": "Un juego de rol basado en texto que corre en la terminal. Explora, lucha contra enemigos y sube de nivel a tu personaje a través de una interfaz de línea de comandos, con el estado del juego, el combate y la progresión gestionados en el código."
+      "short": "Un dungeon crawler de terminal — lucha contra monstruos, sube de nivel y vence al jefe final.",
+      "long": "Un juego de rol que se juega completamente en la terminal. Explora una mazmorra, lucha contra monstruos, gana XP y sube de nivel, recoge botín y enfréntate al jefe final — todo a través de una interfaz de línea de comandos."
     },
     "crypto-arbitrage-bot": {
-      "title": "Bot de Arbitraje de Cripto",
-      "short": "Un bot de arbitraje de cripto hecho en un hackathon.",
-      "long": "Un bot de trading hecho en un hackathon que escanea los mercados de cripto en busca de oportunidades de arbitraje — diferencias de precio entre exchanges o pares — y reacciona a ellas automáticamente. Centrado en obtener datos de mercado en tiempo real y actuar sobre spreads rentables."
+      "title": "Bot.byte — Bot de Arbitraje de Cripto",
+      "short": "Un bot de arbitraje de cripto hecho en el hackathon BugsByte 26 (UMinho).",
+      "long": "Hecho en el hackathon BugsByte 26 de la Universidad de Minho con el equipo Chill. Bot.byte analiza y compara los precios de cripto entre exchanges en tiempo real y simula órdenes de compra y venta simultáneas para capturar la diferencia de un par entre distintos exchanges. Panel hecho con Streamlit."
     },
     "solitaire-cli": {
-      "title": "Solitario en Terminal",
-      "short": "Un juego de solitario (cartas) jugable en la terminal.",
-      "long": "Un juego de solitario que corre en la terminal, hecho como proyecto universitario (LI2). Implementa toda la lógica del juego de cartas — baraja, pilas, movimientos y condiciones de victoria — con una interfaz de texto."
+      "title": "Juegos de Cartas LI2",
+      "short": "Cuatro solitarios (Golf, Simple Simon, Klondike, FreeCell) en un solo motor en C.",
+      "long": "Una suite de juegos de cartas de terminal escrita en C para la asignatura de Laboratorio de Software II (LI2) en la Universidad de Minho. Un único motor orientado a datos lee cada solitario desde archivos de texto escritos en un pequeño DSL y juega Golf, Simple Simon, Klondike y FreeCell — con validación de movimientos, movimientos automáticos, detección de victoria, deshacer y guardar/cargar. Hecho bajo reglas estrictas (sin variables globales, baja complejidad ciclomática) y cubierto por tests CUnit."
     },
     "background-remover": {
       "title": "Eliminador de Fondo",
-      "short": "Un script que elimina el fondo de las fotos.",
+      "short": "Un script que elimina el fondo de las fotos, aislando el sujeto.",
       "long": "Un script que elimina automáticamente el fondo de las imágenes, aislando el sujeto. Útil para fotos de producto, avatares y ediciones rápidas sin abrir un editor de imágenes pesado."
     },
     "resell-tracker": {
-      "title": "Rastreador de Reventa",
-      "short": "Una herramienta para seguir artículos de reventa, costos y ganancias.",
-      "long": "Un rastreador para reventa: lleva el control de los artículos, costos de compra, precios de venta y ganancias a lo largo del tiempo. Ayuda a ver qué vale la pena revender y cómo cuadran los números."
+      "title": "ReSell — Rastreador de Reventa",
+      "short": "Una web app para gestionar un negocio de reventa: costos, márgenes, ganancias y reparto entre socios.",
+      "long": "Una web app para gestionar una operación de reventa de principio a fin. Organiza todo por pedido y por artículo y calcula lo que importa — costo real (pieza + comisión de PayPal + envío), margen, ganancia y días hasta vender — además de un resumen global, ganancia por categoría y por socio, e informes mensuales. Incluye también un constructor de pedidos que genera una imagen de catálogo y un mensaje de WhatsApp listo, pre-pedidos, una bóveda de cuentas cifrada, copias de seguridad automáticas y una PWA trilingüe (PT/EN/ES) instalable. Hecha con Next.js y SQLite (node:sqlite) — sin bibliotecas de UI ni de gráficos, solo CSS escrito a mano y gráficos de barras en CSS."
     }
   }
 }
