@@ -49,7 +49,7 @@ function ProjectsSection() {
   const t = useTranslations("projectsSection");
 
   return (
-    <section id="projects" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-12">
+    <section id="projects" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-10 sm:py-12">
       <SectionHeading index="03" title={t("title")} />
       <p className="text-muted -mt-4 mb-6">{t("subtitle")}</p>
       <div className="grid gap-5 sm:grid-cols-2">

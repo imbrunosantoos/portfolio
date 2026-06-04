@@ -26,14 +26,16 @@ export function Hero() {
   ];
 
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-16 pb-12 sm:pt-24">
+    <section className="mx-auto max-w-5xl px-6 pt-12 pb-10 sm:pt-24 sm:pb-12">
       <motion.div
         initial={reduceMotion ? false : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <TerminalWindow title="bruno@portfolio: ~">
-          <div className="space-y-1">
+          {/* break-words so the mono lines never push the window sideways
+              on a narrow phone */}
+          <div className="space-y-1 break-words">
             {/* the growing delay (0.3, 0.55, ...) is what fakes the "typing"
                 feel — each line shows up a beat after the previous one */}
             {lines.map((l, i) => (

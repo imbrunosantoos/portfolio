@@ -18,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
       className="group border-border bg-foreground/[0.02] hover:border-accent/50 hover:bg-foreground/[0.05] relative flex flex-col gap-3 rounded-xl border p-5 transition-colors"
     >
       <div className="flex items-start justify-between gap-3">
-        <p className="text-muted font-mono text-xs">
+        <p className="text-muted min-w-0 font-mono text-xs break-all">
           <span className="text-accent">~/</span>
           {project.slug}
         </p>

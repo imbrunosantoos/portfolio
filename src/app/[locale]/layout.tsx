@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -22,6 +22,15 @@ const geistMono = Geist_Mono({
 
 // used as the base for og/canonical urls below. update if the domain changes.
 const SITE_URL = "https://site-pessoal-nine-wheat.vercel.app";
+
+// mobile bits: width=device-width so it isn't zoomed out on phones, and a
+// theme-color that matches --background so the browser chrome (status bar /
+// address bar) blends into the dark site instead of flashing white.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#08090b",
+};
 
 // page <head> / SEO. the title template means a project page shows up as
 // "Project name — Bruno Santos" without me repeating my name everywhere.

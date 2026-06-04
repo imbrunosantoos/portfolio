@@ -10,7 +10,7 @@ export function Contact() {
   const t = useTranslations("contact");
 
   return (
-    <section id="contact" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-12">
+    <section id="contact" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-10 sm:py-12">
       <SectionHeading index="04" title={t("title")} />
       <p className="text-muted mb-6 max-w-2xl">{t("body")}</p>
       <div className="flex flex-wrap gap-3">
