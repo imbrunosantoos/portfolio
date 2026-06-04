@@ -1,11 +1,15 @@
 import { useTranslations } from "next-intl";
 import { stats } from "@/content/profile";
 
+// the little band of numbers under the hero (projects, languages...). the
+// values are fixed in profile.ts; only the labels get translated.
 export function Stats() {
   const t = useTranslations("stats");
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-8">
+      {/* gap-px + the bg behind the cells is a cheap way to get those thin
+          1px dividers between the stats without drawing real borders */}
       <div className="border-border bg-foreground/[0.02] grid grid-cols-2 gap-px overflow-hidden rounded-xl border sm:grid-cols-4">
         {stats.map((stat) => (
           <div

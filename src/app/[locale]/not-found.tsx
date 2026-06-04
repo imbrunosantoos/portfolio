@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
+// shown for any unknown url inside a locale (e.g. a project slug that doesn't
+// exist). lives under [locale] so the 404 is translated like everything else.
 export default function NotFound() {
   const t = useTranslations("notFound");
 

@@ -1,25 +1,16 @@
-/**
- * Project metadata (language-independent).
- *
- * The translatable text for each project (title / short / long description) lives
- * in `messages/<locale>.json` under `projects.<slug>`. To add a new project:
- *   1. Add an entry here.
- *   2. Add `projects.<slug>` to every file in `messages/`.
- *   3. (Optional) drop a screenshot in `public/projects/<slug>.png` and set `image`.
- */
+// everything about a project that's the same in any language: links, tech,
+// year. the actual words (title + descriptions) live in messages/<lang>.json
+// under projects.<slug> so they can be translated.
+//
+// to add a project: new entry here -> add its strings to the 3 message files
+// -> optionally drop a screenshot in public/projects/ and set `image`.
 export type Project = {
   slug: string;
-  /** Technologies / languages used, shown as tags. */
-  tech: string[];
-  /** Public GitHub repository URL. Use "#" as a placeholder until available. */
-  repo: string;
-  /** Optional live demo URL. */
-  demo?: string;
-  /** Optional screenshot path under /public. */
-  image?: string;
-  /** Highlight on the home page. */
-  featured: boolean;
-  /** Year (or range) for display. */
+  tech: string[]; // shown as #tags on the card + detail page
+  repo: string; // github url, or "#" while there's no repo up yet
+  demo?: string; // live url, if the project has one
+  image?: string; // screenshot path under /public, optional
+  featured: boolean; // not wired up yet — the home currently shows them all
   year: string;
 };
 
@@ -62,6 +53,7 @@ export const projects: Project[] = [
   },
 ];
 
+// used by the detail page to grab one project from the url slug
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }

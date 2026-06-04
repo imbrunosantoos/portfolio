@@ -5,10 +5,15 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { TerminalWindow } from "./TerminalWindow";
 
+// the big intro: a fake terminal that "types" a couple of lines, then drops
+// in the name + tagline. client component because it animates on mount.
 export function Hero() {
   const t = useTranslations();
+  // if the user has reduced-motion on, skip the slide/fade and just show it
   const reduceMotion = useReducedMotion();
 
+  // the two terminal lines: the `whoami` prompt and its output. kept as an
+  // array so i can map over them and stagger the fade below.
   const lines = [
     { el: <Prompt key="p1">{t("hero.command")}</Prompt> },
     {
@@ -29,6 +34,8 @@ export function Hero() {
       >
         <TerminalWindow title="bruno@portfolio: ~">
           <div className="space-y-1">
+            {/* the growing delay (0.3, 0.55, ...) is what fakes the "typing"
+                feel — each line shows up a beat after the previous one */}
             {lines.map((l, i) => (
               <motion.div
                 key={i}
@@ -47,6 +54,7 @@ export function Hero() {
               transition={{ delay: 0.9, duration: 0.4 }}
             >
               {t("hero.greeting")}
+              {/* the blinking _ after my name — pure css (see .caret) */}
               <span className="caret" aria-hidden>
                 _
               </span>
@@ -84,6 +92,8 @@ export function Hero() {
   );
 }
 
+// little helper that renders the coloured "bruno@portfolio:~$ " prompt so i
+// don't repeat all the spans every time
 function Prompt({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-foreground">

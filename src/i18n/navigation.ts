@@ -1,7 +1,8 @@
 import { createNavigation } from "next-intl/navigation";
 import { routing } from "./routing";
 
-// Locale-aware navigation helpers. Use these instead of next/link and
-// next/navigation so the active locale is preserved across navigations.
+// drop-in replacements for next/link and next/navigation that keep the
+// current language in the url. always import Link / useRouter from here —
+// if i use the plain next ones the links jump back to the default locale.
 export const { Link, redirect, usePathname, useRouter, getPathname } =
   createNavigation(routing);
