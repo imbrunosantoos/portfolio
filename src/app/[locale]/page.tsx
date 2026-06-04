@@ -10,13 +10,16 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/content/projects";
 
+// the landing page. just stacks the sections in order and wraps each one in
+// <Reveal> so it fades in as you scroll down. hero is left out of Reveal on
+// purpose — it's already visible on load and has its own intro animation.
 export default async function HomePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(locale); // keep this static, same as the layout
 
   return (
     <>
@@ -40,6 +43,8 @@ export default async function HomePage({
   );
 }
 
+// kept inline instead of its own component since it's the only spot that
+// loops the projects list. the #projects id is what the hero button scrolls to.
 function ProjectsSection() {
   const t = useTranslations("projectsSection");
 
@@ -49,6 +54,8 @@ function ProjectsSection() {
       <p className="text-muted -mt-4 mb-6">{t("subtitle")}</p>
       <div className="grid gap-5 sm:grid-cols-2">
         {projects.map((project, i) => (
+          // small stagger (delay grows per card) so they pop in one after
+          // the other instead of all at once
           <Reveal key={project.slug} delay={i * 0.05}>
             <ProjectCard project={project} />
           </Reveal>

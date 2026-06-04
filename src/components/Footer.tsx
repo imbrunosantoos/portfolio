@@ -3,9 +3,11 @@ import { Mail } from "lucide-react";
 import { GithubIcon } from "./icons";
 import { socials } from "@/content/profile";
 
+// bottom bar: copyright + the two social icons. links come from the shared
+// socials object so i only keep my github/email in one place.
 export function Footer() {
   const t = useTranslations();
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear(); // so i never have to update the year
 
   return (
     <footer className="border-border mt-24 border-t">

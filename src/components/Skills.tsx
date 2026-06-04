@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import { SectionHeading } from "./SectionHeading";
 import { skillGroups } from "@/content/profile";
 
+// skills grouped into languages / frameworks / tools. the groups + items come
+// from profile.ts; only the group label gets translated (the tech names don't).
 export function Skills() {
   const t = useTranslations("skills");
 

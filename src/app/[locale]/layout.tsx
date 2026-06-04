@@ -8,6 +8,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "../globals.css";
 
+// two fonts: Geist for normal text and Geist Mono for the terminal bits.
+// next/font self-hosts them so there's no extra request to google.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,8 +20,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// used as the base for og/canonical urls below. update if the domain changes.
 const SITE_URL = "https://site-pessoal-nine-wheat.vercel.app";
 
+// page <head> / SEO. the title template means a project page shows up as
+// "Project name — Bruno Santos" without me repeating my name everywhere.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -34,10 +39,11 @@ export const metadata: Metadata = {
     "portfolio",
     "software developer",
     "Python",
-    "C++",
+    "C",
     "TypeScript",
   ],
   authors: [{ name: "Bruno Santos" }],
+  // tells google the same page exists in 3 languages
   alternates: {
     languages: {
       en: "/en",
@@ -61,10 +67,14 @@ export const metadata: Metadata = {
   },
 };
 
+// prebuild one copy of the site per language (/en, /pt, /es) instead of
+// rendering on demand
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// this is the real root layout — there's no app/layout.tsx because every
+// page lives under /[locale], so this renders the <html> tag itself.
 export default async function LocaleLayout({
   children,
   params,
@@ -73,18 +83,22 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  // someone hit /xx that isn't a real language -> 404
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  // Enable static rendering for this locale.
+  // without this the page falls back to dynamic rendering and the static
+  // export breaks — has to be called before anything reads translations
   setRequestLocale(locale);
 
   return (
+    // dark is hardcoded on purpose: the site is dark-only
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="bg-background text-foreground flex min-h-full flex-col">
+        {/* provider hands the loaded messages down to every client component */}
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>

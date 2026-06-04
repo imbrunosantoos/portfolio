@@ -1,6 +1,9 @@
 import type { SVGProps } from "react";
 
-// GitHub's brand mark. lucide-react dropped brand icons, so we ship our own.
+// lucide-react removed all the brand logos at some point, so the github and
+// linkedin marks are just hand-pasted svgs here. they take the same props as
+// a lucide icon (className etc.) so they drop in the same way.
+
 export function GithubIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -14,7 +17,6 @@ export function GithubIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-// LinkedIn's brand mark (also dropped from lucide-react).
 export function LinkedinIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>

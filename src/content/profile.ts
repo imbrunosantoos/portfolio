@@ -1,16 +1,17 @@
-/**
- * Language-independent profile data: social links, skill groups and stats.
- * Translatable labels (group names, stat labels) live in `messages/<locale>.json`.
- */
+// the stuff about me that doesn't change per language: contact links, skills
+// and the headline numbers. the captions/labels get translated over in
+// messages/<lang>.json — here it's just data.
 
 export const socials = {
   github: "https://github.com/imbrunosantoos",
   email: "brunoribeirosouzasantos@gmail.com",
-  // Optional: fill in to show a LinkedIn button (hidden while empty).
+  // leave empty to hide the linkedin button; paste a url here to show it
   linkedin: "",
 };
 
-/** Skill groups. `labelKey` maps to `skills.groups.<labelKey>` in messages. */
+// skills split into a few groups for the skills section. labelKey points at
+// skills.groups.<labelKey> in the messages; the tech names themselves aren't
+// translated (Python is Python everywhere).
 export const skillGroups: { labelKey: string; items: string[] }[] = [
   {
     labelKey: "languages",
@@ -26,7 +27,8 @@ export const skillGroups: { labelKey: string; items: string[] }[] = [
   },
 ];
 
-/** Headline stats. `value` is shown as-is; `labelKey` maps to `stats.<labelKey>`. */
+// the four numbers under the hero. value is printed exactly as written (so it
+// can be "5+" or even "UMinho"), labelKey points at stats.<labelKey>.
 export const stats: { value: string; labelKey: string }[] = [
   { value: "5+", labelKey: "projects" },
   { value: "5", labelKey: "languages" },

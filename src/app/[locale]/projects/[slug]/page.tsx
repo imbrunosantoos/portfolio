@@ -8,10 +8,14 @@ import { Link } from "@/i18n/navigation";
 import { GithubIcon } from "@/components/icons";
 import { getProject, projects, type Project } from "@/content/projects";
 
+// one static page per project (x3 languages) -> next builds them all ahead
+// of time. new project in projects.ts = new page automatically.
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
+// per-project <title>/description so each page has its own tab name and a
+// proper preview when the link gets shared
 export async function generateMetadata({
   params,
 }: {
@@ -36,17 +40,22 @@ export default async function ProjectPage({
   setRequestLocale(locale);
 
   const project = getProject(slug);
+  // unknown slug -> 404 instead of crashing
   if (!project) {
     notFound();
   }
 
+  // split into a second component so the page stays an async server component
+  // while the markup below can use the regular useTranslations hook
   return <ProjectDetail project={project} />;
 }
 
 function ProjectDetail({ project }: { project: Project }) {
   const t = useTranslations();
+  // text lives in the messages files, keyed by the project slug
   const title = t(`projects.${project.slug}.title`);
   const long = t(`projects.${project.slug}.long`);
+  // "#" is my placeholder for "no repo yet" -> show "coming soon" instead
   const hasRepo = project.repo && project.repo !== "#";
 
   return (
@@ -68,6 +77,7 @@ function ProjectDetail({ project }: { project: Project }) {
         <span className="text-muted font-mono text-sm">{project.year}</span>
       </div>
 
+      {/* only render the screenshot block if the project actually has one */}
       {project.image && (
         <div className="border-foreground/10 relative mt-6 aspect-video overflow-hidden rounded-xl border">
           <Image
@@ -94,12 +104,15 @@ function ProjectDetail({ project }: { project: Project }) {
               key={tech}
               className="border-border bg-foreground/[0.03] rounded-md border px-3 py-1 text-sm"
             >
+              {/* turn "ONNX Runtime" into a hashtag-ish #onnx-runtime */}
               #{tech.toLowerCase().replace(/\s+/g, "-")}
             </span>
           ))}
         </div>
       </div>
 
+      {/* github button if the repo is up, otherwise a disabled "coming soon".
+          demo button only shows when the project has a live url. */}
       <div className="mt-10 flex flex-wrap gap-3">
         {hasRepo ? (
           <a

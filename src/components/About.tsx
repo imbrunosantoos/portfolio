@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "./SectionHeading";
 
+// just the heading + a paragraph of bio. text is in the messages files.
 export function About() {
   const t = useTranslations("about");
 

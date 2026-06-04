@@ -4,6 +4,8 @@ import { SectionHeading } from "./SectionHeading";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { socials } from "@/content/profile";
 
+// last section: github + email buttons (and linkedin if i ever fill it in).
+// the linkedin button is hidden while socials.linkedin is an empty string.
 export function Contact() {
   const t = useTranslations("contact");
 

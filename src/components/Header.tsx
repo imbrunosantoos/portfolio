@@ -1,6 +1,8 @@
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
+// sticky top bar: the logo is a little fake shell prompt that links home,
+// plus the language switcher on the right. that's it, kept it minimal.
 export function Header() {
   return (
     <header className="border-border bg-background/70 sticky top-0 z-50 border-b backdrop-blur">

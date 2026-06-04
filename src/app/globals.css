@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
-/* Dark, terminal/dev theme. Always on (set via `class="dark"` on <html>). */
+/* one dark palette, no light mode. these vars are the single source of truth
+   for colors — tweak the green here and the whole site follows. */
 :root {
   --background: #08090b;
   --foreground: #e6edf3;
-  --muted: #8b949e;
-  --accent: #4ade80; /* terminal green */
-  --accent-foreground: #04150b;
+  --muted: #8b949e; /* dim grey for secondary text */
+  --accent: #4ade80; /* the terminal green used everywhere */
+  --accent-foreground: #04150b; /* dark text that sits on the green */
   --border: rgba(230, 237, 243, 0.1);
-  --grid: rgba(230, 237, 243, 0.04);
+  --grid: rgba(230, 237, 243, 0.04); /* faint lines of the background grid */
 }
 
+/* expose the vars above to tailwind so i can write bg-background, text-muted,
+   border-border etc. instead of hardcoding colors in every class */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -26,7 +29,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  /* Subtle dotted grid + a soft glow at the top. */
+  /* three layers stacked: a soft green glow up top, then two thin line
+     gradients (horizontal + vertical) that together make the 40px grid.
+     fixed so the grid doesn't scroll with the content. */
   background-image:
     radial-gradient(
       circle at 50% -10%,
@@ -47,7 +52,8 @@ html {
   background: color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
-/* Blinking caret used in terminal-style headings. */
+/* the blinking cursor after my name / in the header. steps(1) makes it snap
+   on/off instead of fading, like a real terminal caret. */
 @keyframes blink {
   0%,
   49% {
@@ -61,13 +67,15 @@ html {
 
 .caret {
   display: inline-block;
-  width: 0.6ch;
+  width: 0.6ch; /* roughly one character wide */
   margin-left: 0.1ch;
   background: var(--accent);
-  color: transparent;
+  color: transparent; /* hide the underscore char, only show the green block */
   animation: blink 1.1s steps(1) infinite;
 }
 
+/* be nice to people who get motion-sick: kill the smooth scroll and stop the
+   caret blinking if they've asked the OS for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
