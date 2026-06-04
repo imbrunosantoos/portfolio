@@ -1,28 +1,97 @@
+"use client";
+
 import { useTranslations } from "next-intl";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { TerminalWindow } from "./TerminalWindow";
 
 export function Hero() {
   const t = useTranslations();
+  const reduceMotion = useReducedMotion();
+
+  const lines = [
+    { el: <Prompt key="p1">{t("hero.command")}</Prompt> },
+    {
+      el: (
+        <p key="o1" className="text-muted">
+          <span className="text-accent">&gt;</span> {t("hero.output")}
+        </p>
+      ),
+    },
+  ];
 
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-20 pb-12 sm:pt-28">
-      <p className="text-accent mb-3 text-sm font-medium tracking-wide uppercase">
-        {t("site.role")}
-      </p>
-      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-        {t("hero.greeting")}
-        <span className="text-accent">.</span>
-      </h1>
-      <p className="text-foreground/70 mt-6 max-w-2xl text-lg leading-relaxed">
-        {t("hero.tagline")}
-      </p>
-      <a
-        href="#projects"
-        className="text-foreground/70 hover:text-accent mt-8 inline-flex items-center gap-2 text-sm font-medium transition-colors"
+    <section className="mx-auto max-w-5xl px-6 pt-16 pb-12 sm:pt-24">
+      <motion.div
+        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        {t("hero.cta")}
-        <ArrowDown className="h-4 w-4" />
-      </a>
+        <TerminalWindow title="bruno@portfolio: ~">
+          <div className="space-y-1">
+            {lines.map((l, i) => (
+              <motion.div
+                key={i}
+                initial={reduceMotion ? false : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 + i * 0.25, duration: 0.3 }}
+              >
+                {l.el}
+              </motion.div>
+            ))}
+
+            <motion.h1
+              className="font-sans pt-4 text-4xl font-bold tracking-tight sm:text-6xl"
+              initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.4 }}
+            >
+              {t("hero.greeting")}
+              <span className="caret" aria-hidden>
+                _
+              </span>
+            </motion.h1>
+
+            <motion.p
+              className="font-sans text-muted max-w-2xl pt-4 text-base leading-relaxed sm:text-lg"
+              initial={reduceMotion ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.1, duration: 0.4 }}
+            >
+              {t("hero.tagline")}
+            </motion.p>
+
+            <motion.div
+              className="pt-6"
+              initial={reduceMotion ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.3, duration: 0.4 }}
+            >
+              <a
+                href="#projects"
+                className="border-accent/40 text-accent hover:bg-accent/10 inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm transition-colors"
+              >
+                <span className="text-muted">[</span>
+                {t("hero.cta")}
+                <ArrowDown className="h-4 w-4" />
+                <span className="text-muted">]</span>
+              </a>
+            </motion.div>
+          </div>
+        </TerminalWindow>
+      </motion.div>
     </section>
+  );
+}
+
+function Prompt({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-foreground">
+      <span className="text-accent">bruno@portfolio</span>
+      <span className="text-muted">:</span>
+      <span className="text-sky-400">~</span>
+      <span className="text-muted">$ </span>
+      {children}
+    </p>
   );
 }

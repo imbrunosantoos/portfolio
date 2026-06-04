@@ -8,9 +8,40 @@
     "projects": "Projects"
   },
   "hero": {
+    "command": "whoami",
+    "output": "Software Developer",
     "greeting": "Hi, I'm Bruno",
     "tagline": "I build things — from terminal games to crypto bots. Here's a look at the projects I'm working on.",
-    "cta": "View projects"
+    "cta": "view projects"
+  },
+  "stats": {
+    "command": "uptime",
+    "projects": "Projects",
+    "hackathons": "Hackathons",
+    "languages": "Languages",
+    "coffee": "Cups of coffee"
+  },
+  "about": {
+    "command": "cat about.md",
+    "title": "About me",
+    "body": "I'm a developer who likes building things from scratch — especially in the terminal. From role-playing games and card games to a crypto arbitrage bot and handy scripts, I enjoy turning ideas into working code. Always learning, always shipping."
+  },
+  "skills": {
+    "command": "ls skills/",
+    "title": "Skills",
+    "groups": {
+      "languages": "languages",
+      "tools": "tools",
+      "interests": "interests"
+    }
+  },
+  "contact": {
+    "command": "./contact.sh",
+    "title": "Get in touch",
+    "body": "Want to talk, collaborate or just say hi? Reach out.",
+    "github": "GitHub",
+    "email": "Email",
+    "linkedin": "LinkedIn"
   },
   "projectsSection": {
     "title": "Projects",
