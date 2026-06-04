@@ -22,7 +22,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "body": "Soy estudiante de Ingeniería Informática en la Universidad de Minho y me gusta construir cosas de principio a fin — la mayoría empieza en una terminal. He hecho un dungeon crawler y un motor de solitarios en C y Python, un bot de arbitraje de cripto en un hackathon y una web app completa de reventa. Me importa el código limpio, entregar herramientas que la gente realmente usa, y aprender lo que pida el próximo proyecto."
+    "body": "Soy estudiante de Ingeniería de Software en la Universidad de Minho y me gusta construir cosas de principio a fin — la mayoría empieza en una terminal. He hecho un dungeon crawler y un motor de solitarios en C y Python, un bot de arbitraje de cripto en un hackathon y una web app completa de reventa. Me importa el código limpio, entregar herramientas que la gente realmente usa, y aprender lo que pida el próximo proyecto."
   },
   "skills": {
     "title": "Habilidades",
@@ -81,9 +81,9 @@
       "long": "Una suite de juegos de cartas de terminal escrita en C para la asignatura de Laboratorio de Software II (LI2) en la Universidad de Minho. Un único motor orientado a datos lee cada solitario desde archivos de texto escritos en un pequeño DSL y juega Golf, Simple Simon, Klondike y FreeCell — con validación de movimientos, movimientos automáticos, detección de victoria, deshacer y guardar/cargar. Hecho bajo reglas estrictas (sin variables globales, baja complejidad ciclomática) y cubierto por tests CUnit."
     },
     "background-remover": {
-      "title": "Eliminador de Fondo",
-      "short": "Un script que elimina el fondo de las fotos, aislando el sujeto.",
-      "long": "Un script que elimina automáticamente el fondo de las imágenes, aislando el sujeto. Útil para fotos de producto, avatares y ediciones rápidas sin abrir un editor de imágenes pesado."
+      "title": "Eliminador de Fondo por Lotes",
+      "short": "Un script en Python que elimina el fondo de miles de fotos de producto por lotes.",
+      "long": "Un script en Python que elimina el fondo de un catálogo grande de imágenes por lotes — alrededor de 10.000 fotos de camisetas de fútbol (23 GB) — generando PNG transparentes listos para e-commerce. Hecho para el catálogo de Infinity Imports PT: carga el modelo de IA u2net una sola vez, replica el árbol de carpetas de origen y es seguro para reanudar (omite los archivos ya procesados, así que puedes parar y reiniciar con Ctrl+C). Los archivos corruptos se registran y se omiten en lugar de romper la ejecución, una barra de progreso en vivo muestra la velocidad y el ETA, y la memoria se mantiene estable en ejecuciones largas gracias a la recolección de basura periódica. Funciona de forma nativa en Apple Silicon a través de ONNX Runtime."
     },
     "resell-tracker": {
       "title": "ReSell — Rastreador de Reventa",
