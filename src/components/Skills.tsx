@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { CommandHeading } from "./CommandHeading";
+import { SectionHeading } from "./SectionHeading";
 import { skillGroups } from "@/content/profile";
 
 export function Skills() {
@@ -7,13 +7,12 @@ export function Skills() {
 
   return (
     <section id="skills" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-12">
-      <CommandHeading command={t("command")} title={t("title")} />
+      <SectionHeading index="02" title={t("title")} />
       <div className="space-y-6">
         {skillGroups.map((group) => (
-          <div key={group.labelKey}>
-            <p className="text-muted mb-3 font-mono text-sm">
-              <span className="text-accent">drwxr-xr-x</span>{" "}
-              {t(`groups.${group.labelKey}`)}/
+          <div key={group.labelKey} className="flex flex-col gap-3 sm:flex-row sm:gap-6">
+            <p className="text-muted w-32 shrink-0 text-sm">
+              {t(`groups.${group.labelKey}`)}
             </p>
             <div className="flex flex-wrap gap-2">
               {group.items.map((item) => (

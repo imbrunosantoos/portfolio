@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Mail } from "lucide-react";
-import { CommandHeading } from "./CommandHeading";
+import { SectionHeading } from "./SectionHeading";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { socials } from "@/content/profile";
 
@@ -9,7 +9,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-12">
-      <CommandHeading command={t("command")} title={t("title")} />
+      <SectionHeading index="04" title={t("title")} />
       <p className="text-muted mb-6 max-w-2xl">{t("body")}</p>
       <div className="flex flex-wrap gap-3">
         <a
