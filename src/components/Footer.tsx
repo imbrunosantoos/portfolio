@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Github, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { GithubIcon } from "./icons";
 
 const GITHUB_URL = "https://github.com/imbrunosantoos";
 const EMAIL = "brunoosirmaos@gmail.com";
@@ -22,7 +23,7 @@ export function Footer() {
             aria-label="GitHub"
             className="hover:text-foreground transition-colors"
           >
-            <Github className="h-5 w-5" />
+            <GithubIcon className="h-5 w-5" />
           </a>
           <a
             href={`mailto:${EMAIL}`}

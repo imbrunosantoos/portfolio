@@ -2,7 +2,7 @@
 
 My personal website / portfolio, showcasing my current and future projects.
 
-🌐 **Live:** _coming soon (Vercel)_
+🌐 **Live:** https://site-pessoal-nine-wheat.vercel.app
 
 ## Tech stack
 
