@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "Bruno Santos",
+    "role": "Desenvolvedor de Software"
+  },
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou o Bruno",
+    "tagline": "Eu construo coisas — de jogos de terminal a bots de cripto. Aqui está uma amostra dos projetos em que trabalho.",
+    "cta": "Ver projetos"
+  },
+  "projectsSection": {
+    "title": "Projetos",
+    "subtitle": "Uma seleção de coisas que construí.",
+    "viewDetails": "Ver detalhes",
+    "viewCode": "Ver código",
+    "viewDemo": "Demonstração",
+    "back": "Voltar aos projetos",
+    "techTitle": "Construído com",
+    "comingSoon": "Repositório em breve"
+  },
+  "footer": {
+    "builtWith": "Feito com Next.js · Hospedado na Vercel",
+    "rights": "Todos os direitos reservados."
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "notFound": {
+    "title": "Projeto não encontrado",
+    "description": "O projeto que você procura não existe.",
+    "back": "Voltar ao início"
+  },
+  "projects": {
+    "terminal-rpg": {
+      "title": "RPG de Terminal",
+      "short": "Um RPG que você joga inteiramente no terminal.",
+      "long": "Um RPG baseado em texto que roda no terminal. Explore, lute contra inimigos e evolua seu personagem por uma interface de linha de comando, com estado do jogo, combate e progressão todos feitos em código."
+    },
+    "crypto-arbitrage-bot": {
+      "title": "Bot de Arbitragem de Cripto",
+      "short": "Um bot de arbitragem de cripto feito num hackathon.",
+      "long": "Um bot de trading feito num hackathon que varre os mercados de cripto em busca de oportunidades de arbitragem — diferenças de preço entre exchanges ou pares — e reage a elas automaticamente. Focado em obter dados de mercado em tempo real e agir sobre spreads lucrativos."
+    },
+    "solitaire-cli": {
+      "title": "Paciência no Terminal",
+      "short": "Um jogo de paciência (cartas) jogável no terminal.",
+      "long": "Um jogo de paciência que roda no terminal, feito como projeto da faculdade (LI2). Implementa toda a lógica do jogo de cartas — baralho, pilhas, jogadas e condições de vitória — com uma interface em texto."
+    },
+    "background-remover": {
+      "title": "Removedor de Fundo",
+      "short": "Um script que remove o fundo de fotos.",
+      "long": "Um script que remove automaticamente o fundo de imagens, isolando o objeto. Útil para fotos de produto, avatares e edições rápidas sem abrir um editor de imagem pesado."
+    },
+    "resell-tracker": {
+      "title": "Rastreador de Revenda",
+      "short": "Uma ferramenta para acompanhar itens de revenda, custos e lucro.",
+      "long": "Um rastreador para revenda: acompanhe itens, custos de compra, preços de venda e lucro ao longo do tempo. Ajuda a ver o que vale a pena revender e como os números fecham."
+    }
+  }
+}
