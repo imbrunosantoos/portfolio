@@ -8,9 +8,40 @@
     "projects": "Proyectos"
   },
   "hero": {
+    "command": "whoami",
+    "output": "Desarrollador de Software",
     "greeting": "Hola, soy Bruno",
     "tagline": "Construyo cosas — desde juegos de terminal hasta bots de cripto. Aquí tienes una muestra de los proyectos en los que trabajo.",
-    "cta": "Ver proyectos"
+    "cta": "ver proyectos"
+  },
+  "stats": {
+    "command": "uptime",
+    "projects": "Proyectos",
+    "hackathons": "Hackathons",
+    "languages": "Lenguajes",
+    "coffee": "Tazas de café"
+  },
+  "about": {
+    "command": "cat sobre.md",
+    "title": "Sobre mí",
+    "body": "Soy un desarrollador al que le gusta construir cosas desde cero — especialmente en la terminal. Desde juegos de rol y de cartas hasta un bot de arbitraje de cripto y scripts útiles, disfruto convirtiendo ideas en código que funciona. Siempre aprendiendo, siempre entregando."
+  },
+  "skills": {
+    "command": "ls skills/",
+    "title": "Habilidades",
+    "groups": {
+      "languages": "lenguajes",
+      "tools": "herramientas",
+      "interests": "intereses"
+    }
+  },
+  "contact": {
+    "command": "./contacto.sh",
+    "title": "Ponte en contacto",
+    "body": "¿Quieres hablar, colaborar o solo saludar? Escríbeme.",
+    "github": "GitHub",
+    "email": "Email",
+    "linkedin": "LinkedIn"
   },
   "projectsSection": {
     "title": "Proyectos",
