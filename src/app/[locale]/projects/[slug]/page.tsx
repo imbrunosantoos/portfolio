@@ -3,8 +3,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { GithubIcon } from "@/components/icons";
 import { getProject, projects, type Project } from "@/content/projects";
 
 export function generateStaticParams() {
@@ -101,12 +102,12 @@ function ProjectDetail({ project }: { project: Project }) {
             rel="noopener noreferrer"
             className="bg-accent hover:bg-accent/90 text-accent-foreground inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
           >
-            <Github className="h-4 w-4" />
+            <GithubIcon className="h-4 w-4" />
             {t("projectsSection.viewCode")}
           </a>
         ) : (
           <span className="border-foreground/10 text-foreground/50 inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm">
-            <Github className="h-4 w-4" />
+            <GithubIcon className="h-4 w-4" />
             {t("projectsSection.comingSoon")}
           </span>
         )}
