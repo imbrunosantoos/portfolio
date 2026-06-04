@@ -16,7 +16,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "terminal-rpg",
+    slug: "dungeon-crawler",
     tech: ["Python"],
     repo: "https://github.com/imbrunosantoos/dungeon-crawler",
     featured: true,
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     slug: "crypto-arbitrage-bot",
     tech: ["Python", "Streamlit", "SQLite", "pandas"],
-    repo: "https://github.com/imbrunosantoos/hackathon",
+    repo: "https://github.com/imbrunosantoos/botbyte",
     featured: true,
     year: "2026",
   },
