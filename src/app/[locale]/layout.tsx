@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 // used as the base for og/canonical urls below. update if the domain changes.
-const SITE_URL = "https://site-pessoal-nine-wheat.vercel.app";
+const SITE_URL = "https://brunosantos-devsite.vercel.app";
 
 // mobile bits: width=device-width so it isn't zoomed out on phones, and a
 // theme-color that matches --background so the browser chrome (status bar /
