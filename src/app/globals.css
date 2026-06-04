@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
-/* Dark theme is always on (set via `class="dark"` on <html>). */
+/* Dark, terminal/dev theme. Always on (set via `class="dark"` on <html>). */
 :root {
-  --background: #0a0a0b;
-  --foreground: #ededed;
-  --accent: #8b5cf6;
-  --accent-foreground: #ffffff;
+  --background: #08090b;
+  --foreground: #e6edf3;
+  --muted: #8b949e;
+  --accent: #4ade80; /* terminal green */
+  --accent-foreground: #04150b;
+  --border: rgba(230, 237, 243, 0.1);
+  --grid: rgba(230, 237, 243, 0.04);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -21,12 +26,54 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-}
-
-::selection {
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  /* Subtle dotted grid + a soft glow at the top. */
+  background-image:
+    radial-gradient(
+      circle at 50% -10%,
+      color-mix(in srgb, var(--accent) 10%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  background-attachment: fixed;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* Blinking caret used in terminal-style headings. */
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 0.6ch;
+  margin-left: 0.1ch;
+  background: var(--accent);
+  color: transparent;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .caret {
+    animation: none;
+    opacity: 1;
+  }
 }
