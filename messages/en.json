@@ -65,8 +65,8 @@
     "back": "Back to home"
   },
   "projects": {
-    "terminal-rpg": {
-      "title": "Terminal RPG",
+    "dungeon-crawler": {
+      "title": "Dungeon Crawler",
       "short": "A terminal dungeon crawler — fight monsters, level up and beat the final boss.",
       "long": "A role-playing game played entirely in the terminal. Explore a dungeon, fight monsters, gain XP and level up, collect loot, and take down the final boss — all through a command-line interface."
     },

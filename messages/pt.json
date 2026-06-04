@@ -65,8 +65,8 @@
     "back": "Voltar ao início"
   },
   "projects": {
-    "terminal-rpg": {
-      "title": "RPG de Terminal",
+    "dungeon-crawler": {
+      "title": "Dungeon Crawler",
       "short": "Um dungeon crawler de terminal — enfrente monstros, suba de nível e derrote o chefe final.",
       "long": "Um RPG jogado inteiramente no terminal. Explore uma masmorra, lute contra monstros, ganhe XP e suba de nível, colete loot e enfrente o chefe final — tudo por uma interface de linha de comando."
     },
