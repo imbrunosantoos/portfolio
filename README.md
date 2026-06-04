@@ -16,6 +16,8 @@ My personal website / portfolio, showcasing my current and future projects.
 ## Features
 
 - 🖥️ **Terminal / dev** aesthetic — terminal window hero, prompts, monospace accents
+- 📱 **Fully responsive / mobile-first** — single column on phones, dark browser
+  theme-color, no horizontal scroll, and finger-friendly tap targets
 - 🌍 Trilingual (EN / PT / ES) with a language switcher
 - 🌙 Dark theme with a green terminal accent
 - ✨ Subtle fade/slide-in animations (respects `prefers-reduced-motion`)

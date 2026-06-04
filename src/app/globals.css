@@ -30,8 +30,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   /* three layers stacked: a soft green glow up top, then two thin line
-     gradients (horizontal + vertical) that together make the 40px grid.
-     fixed so the grid doesn't scroll with the content. */
+     gradients (horizontal + vertical) that together make the 40px grid. */
   background-image:
     radial-gradient(
       circle at 50% -10%,
@@ -41,11 +40,21 @@ body {
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 100% 100%, 40px 40px, 40px 40px;
-  background-attachment: fixed;
+}
+
+/* keep the background pinned only on desktop. background-attachment: fixed is
+   janky (and sometimes blurry) on ios safari, so phones just let it scroll. */
+@media (hover: hover) and (min-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  /* belt-and-braces: never allow a stray element to cause sideways scroll on
+     a phone. clip (not hidden) so it doesn't break sticky/position contexts. */
+  overflow-x: clip;
 }
 
 ::selection {

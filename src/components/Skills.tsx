@@ -8,7 +8,7 @@ export function Skills() {
   const t = useTranslations("skills");
 
   return (
-    <section id="skills" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-12">
+    <section id="skills" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-10 sm:py-12">
       <SectionHeading index="02" title={t("title")} />
       <div className="space-y-6">
         {skillGroups.map((group) => (

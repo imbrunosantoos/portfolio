@@ -68,7 +68,7 @@ function ProjectDetail({ project }: { project: Project }) {
         cd ../
       </Link>
 
-      <p className="text-muted font-mono text-sm">
+      <p className="text-muted font-mono text-sm break-all">
         <span className="text-accent">~/</span>
         {project.slug}
       </p>
