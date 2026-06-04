@@ -29,7 +29,7 @@ export const projects: Project[] = [
     tech: ["Python"],
     repo: "https://github.com/imbrunosantoos/dungeon-crawler",
     featured: true,
-    year: "2024",
+    year: "2026",
   },
   {
     slug: "crypto-arbitrage-bot",
@@ -43,14 +43,14 @@ export const projects: Project[] = [
     tech: ["C", "GCC", "CUnit"],
     repo: "https://github.com/imbrunosantoos/li2-card-games",
     featured: true,
-    year: "2024",
+    year: "2026",
   },
   {
     slug: "background-remover",
-    tech: ["Python"],
+    tech: ["Python", "rembg", "ONNX Runtime", "Pillow"],
     repo: "https://github.com/imbrunosantoos/image-background-remover",
     featured: false,
-    year: "2024",
+    year: "2026",
   },
   {
     slug: "resell-tracker",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     repo: "https://github.com/imbrunosantoos/resell-tracker",
     demo: "https://resell-cloud.vercel.app",
     featured: true,
-    year: "2025",
+    year: "2026",
   },
 ];
 

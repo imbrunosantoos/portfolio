@@ -22,7 +22,7 @@
   },
   "about": {
     "title": "Sobre mim",
-    "body": "Sou estudante de Engenharia Informática na Universidade do Minho e gosto de construir coisas de ponta a ponta — a maioria começa num terminal. Já fiz um dungeon crawler e um motor de paciências em C e Python, um bot de arbitragem de cripto num hackathon e uma web app completa de revenda. Me importo com código limpo, entregar ferramentas que as pessoas realmente usam, e aprender o que o próximo projeto pedir."
+    "body": "Sou estudante de Engenharia de Software na Universidade do Minho e gosto de construir coisas de ponta a ponta — a maioria começa num terminal. Já fiz um dungeon crawler e um motor de paciências em C e Python, um bot de arbitragem de cripto num hackathon e uma web app completa de revenda. Me importo com código limpo, entregar ferramentas que as pessoas realmente usam, e aprender o que o próximo projeto pedir."
   },
   "skills": {
     "title": "Habilidades",
@@ -81,9 +81,9 @@
       "long": "Uma suíte de jogos de cartas de terminal escrita em C para a cadeira de Laboratório de Software II (LI2) na Universidade do Minho. Um único motor orientado a dados lê cada paciência a partir de ficheiros de texto escritos numa pequena DSL e joga Golf, Simple Simon, Klondike e FreeCell — com validação de jogadas, jogadas automáticas, detecção de vitória, undo e save/load. Feito sob regras rígidas (sem variáveis globais, baixa complexidade ciclomática) e coberto por testes CUnit."
     },
     "background-remover": {
-      "title": "Removedor de Fundo",
-      "short": "Um script que remove o fundo de fotos, isolando o objeto.",
-      "long": "Um script que remove automaticamente o fundo de imagens, isolando o objeto. Útil para fotos de produto, avatares e edições rápidas sem abrir um editor de imagem pesado."
+      "title": "Removedor de Fundo em Lote",
+      "short": "Um script Python que remove o fundo de milhares de fotos de produto em lote.",
+      "long": "Um script Python que remove o fundo de um catálogo grande de imagens em lote — cerca de 10.000 fotos de camisas de futebol (23 GB) — gerando PNGs transparentes prontos para e-commerce. Feito para o catálogo da Infinity Imports PT: carrega o modelo de IA u2net uma única vez, replica a árvore de pastas de origem e é seguro para retomar (pula os ficheiros já processados, então dá para parar e recomeçar com Ctrl+C). Ficheiros corrompidos são registados e ignorados em vez de quebrar a execução, uma barra de progresso ao vivo mostra a velocidade e o ETA, e a memória fica estável em execuções longas graças à coleta de lixo periódica. Roda nativamente no Apple Silicon através do ONNX Runtime."
     },
     "resell-tracker": {
       "title": "ReSell — Rastreador de Revenda",

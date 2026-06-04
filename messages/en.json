@@ -22,7 +22,7 @@
   },
   "about": {
     "title": "About me",
-    "body": "I'm a Computer Science student at the University of Minho who likes building things end to end — most of them start in a terminal. I've written dungeon crawlers and a solitaire engine in C and Python, a crypto arbitrage bot at a hackathon, and a full reselling web app. I care about clean code, shipping tools people actually use, and learning whatever the next project needs."
+    "body": "I'm a Software Engineering student at the University of Minho who likes building things end to end — most of them start in a terminal. I've written dungeon crawlers and a solitaire engine in C and Python, a crypto arbitrage bot at a hackathon, and a full reselling web app. I care about clean code, shipping tools people actually use, and learning whatever the next project needs."
   },
   "skills": {
     "title": "Skills",
@@ -81,9 +81,9 @@
       "long": "A suite of terminal card games written in C for the Software Laboratory II (LI2) course at the University of Minho. A single data-driven engine reads each solitaire from text files written in a small DSL and plays Golf, Simple Simon, Klondike and FreeCell — with move validation, automatic moves, win detection, undo and save/load. Built under strict constraints (no global variables, low cyclomatic complexity) and covered by CUnit tests."
     },
     "background-remover": {
-      "title": "Background Remover",
-      "short": "A script that removes the background from photos, isolating the subject.",
-      "long": "A script that automatically removes the background from images, isolating the subject. Handy for product photos, avatars and quick edits without opening a heavy image editor."
+      "title": "Batch Background Remover",
+      "short": "A Python script that batch-removes backgrounds from thousands of product photos.",
+      "long": "A Python script that batch-removes backgrounds from a large image catalogue — around 10,000 football-jersey photos (23 GB) — producing transparent PNGs ready for e-commerce. Built for the Infinity Imports PT catalogue: it loads the u2net AI model once, mirrors the source folder tree, and is resume-safe (it skips files already done, so you can stop and restart with Ctrl+C). Corrupted files are logged and skipped instead of crashing the run, a live progress bar shows speed and ETA, and memory is kept stable over long runs with periodic garbage collection. Runs natively on Apple Silicon through ONNX Runtime."
     },
     "resell-tracker": {
       "title": "ReSell — Reselling Tracker",
